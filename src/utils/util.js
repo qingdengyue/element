@@ -123,7 +123,7 @@ export const isEdge = function() {
 };
 
 export const isSafari = function() {
-  return !Vue.prototype.$isServer && (navigator.userAgent.indexOf('iPhone') > -1 || navigator.userAgent.indexOf('Mac') > -1);
+  return !Vue.prototype.$isServer && /Safari/u.test(navigator.userAgent) && !/Chrome/u.test(navigator.userAgent);
 };
 
 export const autoprefixer = function(style) {
