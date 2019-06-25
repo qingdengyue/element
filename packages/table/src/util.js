@@ -175,13 +175,11 @@ export function parseHeight(height) {
     return height;
   }
   if (typeof height === 'string') {
-    if (/^\d+$/.test(height) || /^\d+px/.test(height)) {
+    if (/^\d+(?:px)?$/.test(height)) {
       return parseInt(height, 10);
-    }
-    if (/^\d+%/.test(height)) {
+    } else {
       return height;
     }
-    console.warn('[Element Warn][ElTable]invalid height and it will be ignored.');
   }
   return null;
 }
