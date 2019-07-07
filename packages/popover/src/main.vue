@@ -18,7 +18,7 @@
         <slot>{{ content }}</slot>
       </div>
     </transition>
-    <slot name="reference"></slot>
+    <slot name="reference"> </slot>
   </span>
 </template>
 <script>
